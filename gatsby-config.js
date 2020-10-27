@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Note",
-    siteUrl: "https://note.70-10.net"
+    siteUrl: "https://note.70-10.net",
   },
   plugins: [
     "gatsby-plugin-typescript",
