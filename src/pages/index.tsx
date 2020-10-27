@@ -9,7 +9,7 @@ type Props = {
 
 const Top: FC<Props> = ({ data }) => (
   <DefaultLayout>
-    <h3>Posts</h3>
+    <h4>投稿</h4>
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <li key={node.frontmatter?.slug}>
@@ -20,14 +20,25 @@ const Top: FC<Props> = ({ data }) => (
         </li>
       ))}
     </ul>
-    <hr />
-    <h3>SNS</h3>
-    <a href="https://blog.70-10.net" target="__blank">
+
+    <h4>私について</h4>
+    <p>ソフトウェアエンジニア</p>
+
+    <h4>SNS</h4>
+    <a href="https://github.com/70-10" target="__blank" rel="noopener">
+      GitHub
+    </a>
+    {" / "}
+    <a href="https://blog.70-10.net" target="__blank" rel="noopener">
       Blog
-    </a>{" "}
-    /{" "}
-    <a href="https://twitter.com/70_10" target="__blank">
+    </a>
+    {" / "}
+    <a href="https://twitter.com/70_10" target="__blank" rel="noopener">
       Twitter
+    </a>
+    {" / "}
+    <a href="https://instagram.com/70_10" target="__blank" rel="noopener">
+      Instagram
     </a>
   </DefaultLayout>
 );
