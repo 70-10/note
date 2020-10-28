@@ -47,7 +47,7 @@ export default Top;
 
 export const pageQuery = graphql`
   query Posts {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
           frontmatter {
