@@ -5,10 +5,13 @@ import DefaultLayout from "../layout/default";
 
 type Props = {
   data: PostsQuery;
+  location: {
+    href: string;
+  };
 };
 
-const Top: FC<Props> = ({ data }) => (
-  <DefaultLayout>
+const Top: FC<Props> = ({ data, location }) => (
+  <DefaultLayout location={location.href}>
     <h4>投稿</h4>
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (

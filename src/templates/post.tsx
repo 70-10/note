@@ -5,10 +5,17 @@ import { PostQuery } from "../../types/graphql-types";
 
 type Props = {
   data: PostQuery;
+  location: {
+    href: string;
+  };
 };
 
-const PostTemplate: FC<Props> = ({ data }) => (
-  <DefaultLayout title={data.markdownRemark?.frontmatter?.title || ""}>
+const PostTemplate: FC<Props> = ({ data, location }) => (
+  <DefaultLayout
+    title={data.markdownRemark?.frontmatter?.title || ""}
+    location={location.href}
+    description={data.markdownRemark?.excerpt || ""}
+  >
     <time>{data.markdownRemark?.frontmatter?.date}</time>
     <h3>{data.markdownRemark?.frontmatter?.title}</h3>
 
@@ -30,6 +37,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY/MM/DD")
         title
       }
+      excerpt(pruneLength: 200)
     }
   }
 `;
