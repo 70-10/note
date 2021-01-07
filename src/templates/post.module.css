@@ -1,0 +1,15 @@
+.title {
+  @apply text-3xl font-bold text-green-600;
+}
+
+.subtitle {
+  @apply text-lg font-semibold;
+}
+
+.article {
+  @apply prose prose-green;
+}
+
+.line {
+  @apply my-4;
+}
