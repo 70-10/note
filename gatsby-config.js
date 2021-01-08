@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: "https://note.70-10.net",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
     {

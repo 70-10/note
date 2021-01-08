@@ -1,0 +1,12 @@
+.container {
+  @apply grid grid-cols-7;
+}
+
+.container > div {
+  @apply col-start-2 col-span-5;
+  @apply md:col-start-3 md:col-span-3;
+}
+
+.header {
+  @apply pt-4;
+}

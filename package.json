@@ -29,16 +29,20 @@
     "*.md": "prettier --write"
   },
   "dependencies": {
-    "@exampledev/new.css": "^1.1.3",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.2.0",
     "gatsby": "^2.24.85",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
+    "gatsby-plugin-postcss": "^3.5.0",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-typescript": "^2.4.24",
     "gatsby-source-filesystem": "^2.3.36",
     "gatsby-transformer-remark": "^2.8.46",
+    "postcss": "^8.2.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@types/react-helmet": "6.1.0",

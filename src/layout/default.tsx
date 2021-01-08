@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import { Helmet } from "react-helmet";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import { HeaderQuery } from "../../types/graphql-types";
-import "@exampledev/new.css";
+import styles from "./default.module.css";
+import Title from "../components/title";
 
 type Props = {
   title?: string;
@@ -49,12 +50,14 @@ const DefaultLayout: FC<Props> = ({
             <meta property="og:description" content={description} />
           )}
         </Helmet>
-        <header>
-          <h3>
-            <Link to="/">{data.site?.siteMetadata?.title}</Link>
-          </h3>
-        </header>
-        <div>{children}</div>
+        <div className={styles.container}>
+          <div>
+            <header className={styles.header}>
+              <Title title={data.site?.siteMetadata?.title}></Title>
+            </header>
+            <main>{children}</main>
+          </div>
+        </div>
       </>
     )}
   />
