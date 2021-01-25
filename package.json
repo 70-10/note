@@ -29,7 +29,7 @@
     "*.md": "prettier --write"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.3.1",
+    "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.1",
     "gatsby": "^2.31.1",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
