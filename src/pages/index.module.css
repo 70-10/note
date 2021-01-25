@@ -1,11 +1,6 @@
 .title {
-  @apply text-xl font-bold;
+  @apply text-2xl font-light;
   @apply my-3;
-}
-
-.subtitle {
-  @apply text-lg font-semibold;
-  @apply my-2;
 }
 
 .list_item {
@@ -13,7 +8,7 @@
 }
 
 .link {
-  @apply text-green-500 font-semibold;
+  @apply text-green-500;
   @apply border-0 p-1 px-2;
   @apply hover:bg-gray-300;
   @apply underline;

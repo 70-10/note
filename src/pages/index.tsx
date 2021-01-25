@@ -13,7 +13,7 @@ type Props = {
 
 const Top: FC<Props> = ({ data, location }) => (
   <DefaultLayout location={location.href}>
-    <p className={styles.title}>投稿</p>
+    <p className={styles.title}>Posts</p>
 
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -25,7 +25,7 @@ const Top: FC<Props> = ({ data, location }) => (
       ))}
     </ul>
 
-    <p className={styles.title}>私について</p>
+    <p className={styles.title}>About me</p>
     <p>ソフトウェアエンジニア</p>
 
     <p className={styles.title}>SNS</p>

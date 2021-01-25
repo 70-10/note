@@ -6,11 +6,9 @@ type Props = {
 };
 
 const Title: FC<Props> = ({ title }) => (
-  <div className="prose prose-green">
-    <Link to="/">
-      <h1>{title}</h1>
-    </Link>
-  </div>
+  <Link to="/" className="text-3xl font-light">
+    {title}
+  </Link>
 );
 
 export default Title;

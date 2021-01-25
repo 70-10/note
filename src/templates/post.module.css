@@ -1,9 +1,9 @@
 .title {
-  @apply text-3xl font-bold text-green-600;
+  @apply text-2xl text-green-600 font-light;
 }
 
 .subtitle {
-  @apply text-lg font-semibold;
+  @apply text-lg;
 }
 
 .article {

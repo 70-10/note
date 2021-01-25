@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "メモ置き場",
+    title: "Note",
     siteUrl: "https://note.70-10.net",
   },
   plugins: [

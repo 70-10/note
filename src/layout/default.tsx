@@ -50,13 +50,11 @@ const DefaultLayout: FC<Props> = ({
             <meta property="og:description" content={description} />
           )}
         </Helmet>
-        <div className={styles.container}>
-          <div>
-            <header className={styles.header}>
-              <Title title={data.site?.siteMetadata?.title}></Title>
-            </header>
-            <main>{children}</main>
-          </div>
+        <div className={styles.body}>
+          <header className={styles.header}>
+            <Title title={data.site?.siteMetadata?.title}></Title>
+          </header>
+          <main className={styles.main}>{children}</main>
         </div>
       </>
     )}
