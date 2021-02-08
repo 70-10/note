@@ -31,8 +31,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install and Build
         run: |
-          npm ci
-          npm run build
+          yarn --frozen-lockfile
+          yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
