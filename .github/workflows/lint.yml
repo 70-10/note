@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install
         run: |
-          npm ci
+          yarn --frozen-lockfile
       - name: Lint
         run: |
-          npm run lint
+          yarn lint
