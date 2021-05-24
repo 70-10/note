@@ -13146,7 +13146,7 @@ textlint-rule-no-nfd@^1.0.1:
     textlint-rule-helper "^2.1.1"
     unorm "^1.4.1"
 
-textlint-rule-preset-japanese@^6.0.1:
+textlint-rule-preset-japanese@6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/textlint-rule-preset-japanese/-/textlint-rule-preset-japanese-6.0.1.tgz#27c447dbbbe5cb61d4e0ac69ef95b6dfbb7f2eb4"
   integrity sha512-Z4dy5wZ+frjpjkCxqprzQkQvENr9ZhODlJl3ydss+mNCplWEjiYYxlPBzC8K1hRPs+e361hIdFmszHxa7W4kDQ==
@@ -13195,7 +13195,7 @@ textlint-util-to-string@^3.0.0, textlint-util-to-string@^3.1.1:
     structured-source "^3.0.2"
     unified "^8.4.0"
 
-textlint@^11.9.1:
+textlint@11.9.1:
   version "11.9.1"
   resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.9.1.tgz#13f31aa50a5121eb76adced69dcadc1e007d7c9a"
   integrity sha512-7eC76od8ILhLl3O10h1rd0QxlVaQkR1nqTD7PrszrlGGe8mXS2VNaOXEiAm8PPUMQBdjB5n8/cpeZ+AbDJdNTw==
