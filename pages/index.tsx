@@ -27,7 +27,7 @@ const Home: NextPage<Props> = ({ cmsArticles }) => {
           return (
             <li key={a.id} className={styles.list_item}>
               <span className={styles.link}>
-                <Link href={a.path}>{a.title}</Link>
+                <Link href={a.path}>{`${a.publishAtString}  ${a.title}`}</Link>
               </span>
             </li>
           );
