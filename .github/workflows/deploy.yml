@@ -30,13 +30,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install and Build
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
         run: |
           yarn --frozen-lockfile
           yarn export
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           user_name: github-actions[bot]
