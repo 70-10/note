@@ -21,6 +21,7 @@ class AlertRepository implements IAlertRepository {
     this.client = createClient({
       serviceDomain: "7010-note",
       apiKey: process.env.API_KEY as string,
+      globalDraftKey: process.env.DRAFT_KEY as string,
     });
   }
 
