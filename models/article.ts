@@ -24,6 +24,10 @@ export class Article extends Content {
   }
 
   get publishAtString() {
-    return dayjs(this.publishDate).format("YYYY/MM/DD");
+    if (this.publishDate) {
+      return dayjs(this.publishDate).format("YYYY/MM/DD");
+    }
+
+    return dayjs(this.publishedAt).format("YYYY/MM/DD");
   }
 }
