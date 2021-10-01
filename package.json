@@ -2,59 +2,28 @@
   "name": "note",
   "version": "0.1.0",
   "private": true,
-  "description": "",
-  "keywords": [],
-  "license": "MIT",
-  "author": "",
-  "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "fix": "run-s fix:eslint fix:prettier",
-    "fix:eslint": "yarn lint:eslint --fix",
-    "fix:prettier": "yarn lint:prettier --write",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier . --check",
-    "prepare": "is-ci || husky install"
-  },
-  "lint-staged": {
-    "*.+(js|ts|json)": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.md": "prettier --write"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
-    "@tailwindcss/typography": "0.4.1",
-    "autoprefixer": "10.3.1",
-    "gatsby": "^2.31.1",
-    "gatsby-plugin-graphql-codegen": "2.7.1",
-    "gatsby-plugin-postcss": "^3.5.0",
-    "gatsby-plugin-react-helmet": "^3.8.0",
-    "gatsby-plugin-typescript": "^2.10.0",
-    "gatsby-source-filesystem": "^2.9.0",
-    "gatsby-transformer-remark": "^2.14.0",
-    "postcss": "8.3.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "6.1.0",
-    "tailwindcss": "2.2.7"
+    "dayjs": "^1.10.7",
+    "microcms-js-sdk": "^1.2.0",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/react-helmet": "6.1.2",
-    "@typescript-eslint/eslint-plugin": "4.28.5",
-    "@typescript-eslint/parser": "4.28.5",
+    "@tailwindcss/typography": "^0.4.1",
+    "@types/react": "17.0.24",
+    "autoprefixer": "^10.3.6",
     "eslint": "7.32.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-react": "7.24.0",
-    "husky": "7.0.1",
-    "is-ci": "3.0.0",
-    "lint-staged": "11.1.1",
-    "npm-run-all": "4.1.5",
-    "prettier": "2.3.2",
-    "textlint": "12.0.2",
-    "textlint-rule-preset-japanese": "7.0.0",
-    "typescript": "4.3.5"
+    "eslint-config-next": "11.1.2",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16",
+    "typescript": "4.4.3"
   }
 }
