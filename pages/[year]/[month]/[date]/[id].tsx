@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { factory } from "../../../../factories/article-factory";
 import { CMSArticle } from "../../../../models/api/articles";
-import { createAlertRepository } from "../../../../repositories/article-repository";
+import { createArticleRepository } from "../../../../repositories/article-repository";
 import styles from "./article.module.css";
 
 interface Props {
@@ -10,14 +10,14 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const repo = createAlertRepository();
+  const repo = createArticleRepository();
   const paths = (await repo.getArticles()).map(factory).map((a) => a.path);
   return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const id = context.params?.id as string;
-  const respo = createAlertRepository();
+  const respo = createArticleRepository();
 
   return {
     props: {
