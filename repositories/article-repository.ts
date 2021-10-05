@@ -2,12 +2,12 @@ import { createClient } from "microcms-js-sdk";
 import { GetRequest } from "microcms-js-sdk/dist/cjs/types";
 import { CMSArticle } from "../models/api/articles";
 
-export interface IAlertRepository {
+export interface IArticleRepository {
   getArticles: () => Promise<CMSArticle[]>;
   getArticleById: (contentId: string) => Promise<CMSArticle>;
 }
 
-class AlertRepository implements IAlertRepository {
+class ArticleRepository implements IArticleRepository {
   public client: {
     get: <T>({
       endpoint,
@@ -40,5 +40,5 @@ class AlertRepository implements IAlertRepository {
   }
 }
 
-export const createAlertRepository = (): IAlertRepository =>
-  new AlertRepository();
+export const createArticleRepository = (): IArticleRepository =>
+  new ArticleRepository();

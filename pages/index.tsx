@@ -2,13 +2,13 @@ import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import { factory } from "../factories/article-factory";
 import { CMSArticle } from "../models/api/articles";
-import { createAlertRepository } from "../repositories/article-repository";
+import { createArticleRepository } from "../repositories/article-repository";
 import styles from "./index.module.css";
 
 type Props = { cmsArticles: CMSArticle[] };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const repository = createAlertRepository();
+  const repository = createArticleRepository();
 
   return {
     props: {
