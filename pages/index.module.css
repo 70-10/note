@@ -1,15 +1,21 @@
-.title {
-  @apply text-2xl font-light;
-  @apply my-3;
+.grid_body {
+  @apply grid grid-cols-7 gap-y-6;
 }
 
-.list_item {
-  @apply mb-3;
+.grid_main {
+  @apply col-span-7 lg:col-span-4;
+}
+
+.grid_sub {
+  @apply col-span-7 lg:col-span-3;
+}
+.title {
+  @apply text-2xl font-medium;
+  @apply my-3;
 }
 
 .link {
   @apply text-green-500;
   @apply border-0 p-1 px-2;
-  @apply hover:text-gray-600;
-  @apply underline;
+  @apply hover:text-gray-600 hover:underline;
 }

@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Title: FC<Props> = ({ title }) => (
-  <span className="text-3xl font-light">
+  <span className="text-3xl font-bold">
     <Link href="/">{title}</Link>
   </span>
 );

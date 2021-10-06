@@ -10,7 +10,7 @@ export class Article extends Content {
     revisedAt: Date,
     public body: string,
     public title: string,
-    public publishDate?: Date
+    private publishDate?: Date
   ) {
     super(id, createdAt, updatedAt, publishedAt, revisedAt);
   }
@@ -23,11 +23,11 @@ export class Article extends Content {
     )}/${String(publishDate.date()).padStart(2, "0")}/${this.id}`;
   }
 
-  get publishAtString() {
-    if (this.publishDate) {
-      return dayjs(this.publishDate).format("YYYY/MM/DD");
-    }
+  get publishAt() {
+    return this.publishDate ? this.publishDate : this.publishedAt;
+  }
 
-    return dayjs(this.publishedAt).format("YYYY/MM/DD");
+  get publishAtString() {
+    return dayjs(this.publishAt).format("YYYY/MM/DD");
   }
 }

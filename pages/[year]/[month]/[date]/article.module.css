@@ -7,7 +7,7 @@
 }
 
 .article {
-  @apply prose prose-green;
+  @apply prose prose-green max-w-none;
 }
 
 .line {
