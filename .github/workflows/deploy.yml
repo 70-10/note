@@ -1,6 +1,9 @@
 name: Deploy GitHub Pages
 
 on:
+  repository_dispatch:
+    types:
+      - post-article
   push:
     branches:
       - main
