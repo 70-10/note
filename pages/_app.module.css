@@ -2,6 +2,7 @@
   @apply container mx-auto;
   @apply grid grid-cols-7 gap-y-6;
   @apply p-5;
+  @apply font-body;
 }
 
 .header {

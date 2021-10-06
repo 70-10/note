@@ -2,6 +2,16 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false,
   theme: {
+    fontFamily: {
+      body: [
+        "Helvetica Neue",
+        "Arial",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Meiryo",
+        "sans-serif",
+      ],
+    },
     extend: {
       typography: (theme) => ({
         "3xl": {
@@ -20,7 +30,6 @@ module.exports = {
               fontSize: "1.5rem",
               marginTop: "1em",
               marginBottom: ".6em",
-              textDecoration: "underline",
               color: theme("colors.gray.700"),
             },
             h2: {
