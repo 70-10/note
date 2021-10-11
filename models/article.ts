@@ -16,11 +16,7 @@ export class Article extends Content {
   }
 
   get path() {
-    const publishDate = dayjs(this.publishDate);
-    return `/${publishDate.year()}/${String(publishDate.month() + 1).padStart(
-      2,
-      "0"
-    )}/${String(publishDate.date()).padStart(2, "0")}/${this.id}`;
+    return `/${this.publishAtString}/${this.id}`;
   }
 
   get publishAt() {
