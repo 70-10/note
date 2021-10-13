@@ -21,10 +21,10 @@ const Timeline: FC<Props> = ({ events }) => {
         <li className={styles.feed_item} key={event.id}>
           <Link href={event.path}>
             <a className={styles.link}>
-              <time className={styles.time} dateTime="9-25">
+              <time className={styles.subtitle} dateTime="9-25">
                 {dayjs(event.date).format("YYYY-MM-DD")}
               </time>
-              <span className={styles.text}>{event.text}</span>
+              <span className={styles.title}>{event.text}</span>
             </a>
           </Link>
         </li>
