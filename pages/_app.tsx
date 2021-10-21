@@ -1,6 +1,7 @@
+import NextHeadSeo from "next-head-seo";
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import Title from "../components/title";
+import { BaseUrl, SiteName } from "../constants";
 import "../styles/globals.css";
 import styles from "./_app.module.css";
 
@@ -9,12 +10,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
-        <title>Note</title>
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@70_10" />
-        <meta property="og:title" content={title} />
-      </Head>
+      <NextHeadSeo
+        title={title}
+        canonical={BaseUrl}
+        twitter={{ card: "summary", site: "@70_10" }}
+        og={{ title, siteName: SiteName, url: BaseUrl }}
+      />
       <div className={styles.body}>
         <header className={styles.header}>
           <Title title={title} />

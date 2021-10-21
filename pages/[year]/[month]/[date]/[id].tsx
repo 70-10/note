@@ -1,5 +1,6 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import Head from "next/head";
+import NextHeadSeo from "next-head-seo";
+import { BaseUrl, SiteName } from "../../../../constants";
 import { factory } from "../../../../factories/article-factory";
 import { CMSArticle } from "../../../../models/api/articles";
 import { createArticleRepository } from "../../../../repositories/article-repository";
@@ -28,12 +29,15 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 
 const ArticlePage: NextPage<Props> = ({ cmsArticle }) => {
   const article = factory(cmsArticle);
-
+  const title = `${article.title} | ${SiteName}`;
   return (
     <>
-      <Head>
-        <meta property="og:title" content={`${article.title} | Note`} />
-      </Head>
+      <NextHeadSeo
+        title={title}
+        canonical={`${BaseUrl}${article.path}`}
+        og={{ title, url: `${BaseUrl}${article.path}` }}
+      />
+
       <time className={styles.subtitle}>{article.publishAtString}</time>
       <h3 className={styles.title}>{article.title}</h3>
       <hr className={styles.line} />
